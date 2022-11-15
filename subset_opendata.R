@@ -31,3 +31,9 @@ set.seed(4)
 read_csv("data/TMA/TMA.csv") %>% 
   sample_n(1500) %>% 
   writexl::write_xlsx("data/TMA/TMA.xlsx")
+
+set.seed(5)
+
+readxl::read_excel("data/big5/big5_cleaned.xlsx") %>% 
+  sample_n(1234) %>%
+  writexl::write_xlsx("data/big5/big5_cleaned_smaller.xlsx")
